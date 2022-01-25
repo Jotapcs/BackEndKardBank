@@ -8,7 +8,7 @@ public class DataBase {
     /* Connect Database */
     public static Connection connect() throws Exception{
         Class.forName("com.mysql.cj.jdbc.Driver");
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/brasilprev","jota","");
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/kardbank","jota","");
 
     }
 

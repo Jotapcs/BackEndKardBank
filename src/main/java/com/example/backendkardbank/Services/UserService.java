@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 public class UserService {
@@ -14,27 +13,22 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public List<User> findAll() {
+    public List<User> obterTodos() {
         return userRepository.findAll();
 
     }
 
-    public Optional<User> findById(Integer id) {
-        return userRepository.findById(id);
-
-    }
-
-    public User add(User user) {
+    public User inserir(User user) {
         return userRepository.save(user);
 
     }
 
-    public void delete(Integer id) {
+    public void excluir(Integer id) {
         userRepository.findById(id);
 
     }
 
-    public User update(Integer id, User user) {
+    public User atualizar(Integer id, User user) {
         user.setId(id);
         return userRepository.save(user);
 
